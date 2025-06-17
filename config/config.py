@@ -23,9 +23,9 @@ def get_config():
     parser.add_argument("--checkpoints",type=str,required=True,default="./checkpoints/")
     parser.add_argument("--data_path",type=str,required=True,default='XAUUSD_M5.csv')
     parser.add_argument("--target",type=str,required=True,default="CandleType",help="target variable")
-    parser.add_argument("--time_feature",type=str,required=True,default="Time",help="time feature variable, options: Time, Date")
+    parser.add_argument("--time_var",type=str,required=True,default="Time",help="time feature variable")
     parser.add_argument("--batch_size",type=int,default=16,help="batch size")
-
+    
     # model define
     parser.add_argument("--input_len",type=int,default=80,help="input length")
     parser.add_argument("--output_len",type=int,default=1,help="output length")

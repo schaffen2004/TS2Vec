@@ -8,8 +8,10 @@ python -u run.py \
     --seed 2021 \
     --root_path $root_path \
     --checkpoints ./checkpoints/ \
+    --data XAUUSD \
     --data_path data/XAUUSD_M5.csv \
     --target CandleType \
-    --time_feature Time \
+    --time_var Time \
+    --batch_size 16 \
     --gpu True \
     --device 0

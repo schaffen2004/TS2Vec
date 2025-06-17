@@ -12,7 +12,16 @@ class Provider:
         self.data_loader = self._data_loader()
 
     def _init_dataset(self):
-        return self.data_dict[self.args.data](self.args,self.flag)
+        return self.data_dict[self.args.data](
+            flag=self.flag,
+            root_path=self.args.root_path,
+            data_path=self.args.data_path,
+            target=self.args.target,
+            time_var=self.args.time_var,
+            input_len=self.args.input_len,
+            output_len=self.args.output_len,
+            batch_size=self.args.batch_size,
+        )
     
     def _data_loader(self):
         return DataLoader(self.data_set,batch_size=self.args.batch_size,shuffle=True)
